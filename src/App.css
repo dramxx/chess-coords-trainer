@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Gloria Hallelujah", cursive;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  line-height: 1, 6;
+  background-color: whitesmoke;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* UTILS */
+
+:root {
+  --white-color: #ececec;
+  --white-color-hover: #ffffff;
+  --black-color: #3c3c3c;
+  --black-color-hover: #4d4d4d;
+}
+
+.debug {
+  border: 3px solid var(--black-color);
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* APP */
+
+.App {
+  height: 100vh;
+  width: 100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* PANEL */
+
+.info-panel {
+  height: 10vh;
+  width: 10vw;
+  margin-left: 5vw;
+
+  font-size: 10vh;
+  line-height: 10vh;
+  font-weight: 900;
+}
+
+/* BOARD */
+
+.chess-board {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 80vh;
+  height: 80vh;
+}
+
+.board-coords-wrapper {
+  width: 90vh;
+  height: 90vh;
+  border-radius: 25px;
+  box-shadow: 0px 0px 25px 5px #414a4c;
+}
+
+/* SQUARE */
+
+.square {
+  border: 2px solid var(--black-color);
+  border-radius: 3.5px;
+  margin-top: -2px;
+  margin-left: -2px;
+  width: 10vh;
+  height: 10vh;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-size: 3vh;
+}
+
+.square:nth-child(-n + 8) {
+  margin-top: 8px;
+}
+
+.square:hover {
+  background-color: var(--white-color-hover);
+}
+
+.square:nth-child(-2n + 8),
+.square:nth-child(8) ~ .square:nth-child(-2n + 15),
+.square:nth-child(16) ~ .square:nth-child(-2n + 24),
+.square:nth-child(24) ~ .square:nth-child(-2n + 31),
+.square:nth-child(32) ~ .square:nth-child(-2n + 40),
+.square:nth-child(40) ~ .square:nth-child(-2n + 47),
+.square:nth-child(48) ~ .square:nth-child(-2n + 56),
+.square:nth-child(56) ~ .square:nth-child(-2n + 63) {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.square:nth-child(-2n + 8):hover,
+.square:nth-child(8) ~ .square:nth-child(-2n + 15):hover,
+.square:nth-child(16) ~ .square:nth-child(-2n + 24):hover,
+.square:nth-child(24) ~ .square:nth-child(-2n + 31):hover,
+.square:nth-child(32) ~ .square:nth-child(-2n + 40):hover,
+.square:nth-child(40) ~ .square:nth-child(-2n + 47):hover,
+.square:nth-child(48) ~ .square:nth-child(-2n + 56):hover,
+.square:nth-child(56) ~ .square:nth-child(-2n + 63):hover {
+  background-color: var(--black-color-hover);
 }
