@@ -39,9 +39,9 @@ body {
   height: 100%;
 }
 
-/* APP */
+/* MANAGER */
 
-.App {
+.wrapper {
   height: 100vh;
   width: 100vw;
 }
@@ -84,8 +84,8 @@ body {
   margin-left: -2px;
   width: 10vh;
   height: 10vh;
-  background-color: var(--white-color);
-  color: var(--black-color);
+  background-color: var(--black-color);
+  color: var(--white-color);
   font-size: 3vh;
 }
 
@@ -94,7 +94,7 @@ body {
 }
 
 .square:hover {
-  background-color: var(--white-color-hover);
+  background-color: var(--black-color-hover);
 }
 
 .square:nth-child(-2n + 8),
@@ -105,8 +105,8 @@ body {
 .square:nth-child(40) ~ .square:nth-child(-2n + 47),
 .square:nth-child(48) ~ .square:nth-child(-2n + 56),
 .square:nth-child(56) ~ .square:nth-child(-2n + 63) {
-  background-color: var(--black-color);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
 
 .square:nth-child(-2n + 8):hover,
@@ -117,17 +117,18 @@ body {
 .square:nth-child(40) ~ .square:nth-child(-2n + 47):hover,
 .square:nth-child(48) ~ .square:nth-child(-2n + 56):hover,
 .square:nth-child(56) ~ .square:nth-child(-2n + 63):hover {
-  background-color: var(--black-color-hover);
+  background-color: var(--white-color-hover);
 }
 
+/* TODO: better positioning */
 .file {
   color: var(--black-color);
   position: relative;
-  left: -75px;
+  left: -85%;
 }
 
 .rank {
   color: var(--black-color);
   position: relative;
-  bottom: -75px;
+  bottom: -85%;
 }

@@ -1,12 +1,11 @@
-import InfoPanel from "./components/InfoPanel";
-import ChessBoard from "./components/ChessBoard";
+import React from "react";
+import GameManager from "./components/GameManager";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="App flex">
-      <ChessBoard />
-      <InfoPanel className="flex" message={"H4"} />
+      <GameManager />
     </div>
   );
 };

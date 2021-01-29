@@ -1,11 +1,11 @@
 import React from "react";
 
-const InfoPanel = ({ message }) => {
+const GoalPanel = ({ nextTarget }) => {
   return (
     <div className="info-panel ">
-      <p>{message}</p>
+      <p>{nextTarget}</p>
     </div>
   );
 };
 
-export default InfoPanel;
+export default GoalPanel;
