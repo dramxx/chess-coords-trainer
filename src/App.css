@@ -119,3 +119,15 @@ body {
 .square:nth-child(56) ~ .square:nth-child(-2n + 63):hover {
   background-color: var(--black-color-hover);
 }
+
+.file {
+  color: var(--black-color);
+  position: relative;
+  left: -75px;
+}
+
+.rank {
+  color: var(--black-color);
+  position: relative;
+  bottom: -75px;
+}
