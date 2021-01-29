@@ -10,16 +10,12 @@ const StatusPanel = ({ squareClickTarget, squareClickState }) => {
           squareClickState[i] ? (
             <div key={i}>
               <span>{squareClickTarget[i]}</span>
-              <span className="emoji" type="img">
-                {SUCCESS_EMOJI}
-              </span>
+              {SUCCESS_EMOJI}
             </div>
           ) : (
             <div key={i}>
               <span>{squareClickTarget[i]}</span>
-              <span className="emoji" type="img">
-                {FAIL_EMOJI}
-              </span>
+              {FAIL_EMOJI}
             </div>
           )
         )}
