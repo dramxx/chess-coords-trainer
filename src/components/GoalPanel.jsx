@@ -2,7 +2,7 @@ import React from "react";
 
 const GoalPanel = ({ nextTarget }) => {
   return (
-    <div className="info-panel ">
+    <div className="goal-panel ">
       <p>{nextTarget}</p>
     </div>
   );

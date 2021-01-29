@@ -36,12 +36,8 @@ const GameManager = () => {
 
   const [targetSquare, setTargetSquare] = useState(generateTargetSquare());
 
-  // manage game state
-  // welcome screen
-  // result screen
-
   return (
-    <span className={"wrapper flex"}>
+    <div className={"wrapper flex"}>
       <StatusPanel
         className="flex"
         squareClickState={squareClickState}
@@ -50,7 +46,7 @@ const GameManager = () => {
       <ChessBoard onSquareClick={handleGameLoop} />
       <GoalPanel className="flex" nextTarget={targetSquare} />
       <Countdown countdown={30} timeOut={handleTimeOut} />
-    </span>
+    </div>
   );
 };
 

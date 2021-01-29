@@ -8,11 +8,7 @@ const Countdown = ({ countdown, timeOut }) => {
     if (timer === 0) timeOut();
   }, [timer, timeOut]);
 
-  return (
-    <div style={{ width: "50px", color: "tomato", fontSize: "25px" }}>
-      {timer}
-    </div>
-  );
+  return <div className="countdown">{timer}</div>;
 };
 
 export default Countdown;

@@ -2,22 +2,25 @@ import React from "react";
 
 import { SUCCESS_EMOJI, FAIL_EMOJI } from "../commons/constants";
 
-const GoalPanel = ({ nextTarget, squareClickTarget, squareClickState }) => {
+const StatusPanel = ({ squareClickTarget, squareClickState }) => {
   return (
-    <div className="info-panel ">
-      <div style={{ fontSize: "25px", paddingBottom: "25px" }}>
-        <span style={{ marginRight: "20px" }}>{squareClickTarget}</span>
+    <div className="status-panel ">
+      <div>
+        <span>{squareClickTarget}</span>
         <>
           {squareClickState ? (
-            <span type="img">{SUCCESS_EMOJI}</span>
+            <span className="emoji" type="img">
+              {SUCCESS_EMOJI}
+            </span>
           ) : (
-            <span type="img">{FAIL_EMOJI}</span>
+            <span className="emoji" type="img">
+              {FAIL_EMOJI}
+            </span>
           )}
         </>
       </div>
-      <p>{nextTarget}</p>
     </div>
   );
 };
 
-export default GoalPanel;
+export default StatusPanel;

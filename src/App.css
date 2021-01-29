@@ -26,6 +26,7 @@ body {
   --white-color-hover: #ffffff;
   --black-color: #3c3c3c;
   --black-color-hover: #4d4d4d;
+  --success-color: #ff6347;
 }
 
 .debug {
@@ -46,9 +47,9 @@ body {
   width: 100vw;
 }
 
-/* PANEL */
+/* GOAL PANEL */
 
-.info-panel {
+.goal-panel {
   height: 10vh;
   width: 10vw;
   margin-left: 5vw;
@@ -56,6 +57,29 @@ body {
   font-size: 10vh;
   line-height: 10vh;
   font-weight: 900;
+}
+
+/* STATUS PANEL */
+
+.status-panel {
+  height: 10vh;
+  width: 10vw;
+  margin-left: 5vw;
+
+  font-size: 3vh;
+  font-weight: 900;
+}
+
+.emoji {
+  padding-left: 10px;
+}
+
+/* COUNTDOWN */
+
+.countdown {
+  width: 1vw;
+  font-size: 3vh;
+  color: var(--success-color);
 }
 
 /* BOARD */
