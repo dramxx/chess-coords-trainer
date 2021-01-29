@@ -30,9 +30,13 @@ const GameManager = () => {
     setSquareClickState(id === targetSquare);
   };
 
+  const handleTimeOut = () => {
+    console.log("RESET GAME");
+  };
+
   const [targetSquare, setTargetSquare] = useState(generateTargetSquare());
 
-  // TODO: add countdown 30s
+  // manage game state
   // welcome screen
   // result screen
 
@@ -45,7 +49,7 @@ const GameManager = () => {
       />
       <ChessBoard onSquareClick={handleGameLoop} />
       <GoalPanel className="flex" nextTarget={targetSquare} />
-      <Countdown />
+      <Countdown countdown={30} timeOut={handleTimeOut} />
     </span>
   );
 };
