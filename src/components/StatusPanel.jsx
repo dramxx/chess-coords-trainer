@@ -9,7 +9,6 @@ const StatusPanel = ({ squareClickTarget, squareClickState }) => {
     scrollingPanelRef.current.scrollIntoView({
       behavior: "smooth",
       block: "end",
-      inline: "nearest",
     });
   });
 

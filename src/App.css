@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Gloria Hallelujah";
   -webkit-font-smoothing: antialiased;
   color: #333;
   line-height: 1, 6;
@@ -27,7 +27,8 @@ body {
   --white-color-hover: #ffffff;
   --black-color: #3c3c3c;
   --black-color-hover: #4d4d4d;
-  --success-color: #ff6347;
+  --red-color: #ff6633;
+  --shadow: #414a4c;
 }
 
 .debug {
@@ -43,7 +44,7 @@ body {
 
 /* MANAGER */
 
-.wrapper {
+.game-manager {
   height: 100vh;
   width: 100vw;
 }
@@ -82,7 +83,7 @@ body {
 .countdown {
   width: 1vw;
   font-size: 3vh;
-  color: var(--success-color);
+  color: var(--red-color);
 }
 
 /* BOARD */
@@ -99,7 +100,7 @@ body {
   width: 90vh;
   height: 90vh;
   border-radius: 25px;
-  box-shadow: 0px 0px 25px 5px #414a4c;
+  box-shadow: 0px 0px 25px 5px var(--shadow);
 }
 
 /* SQUARE */
@@ -122,6 +123,7 @@ body {
 
 .square:hover {
   background-color: var(--black-color-hover);
+  cursor: crosshair;
 }
 
 .square:nth-child(-2n + 8),
@@ -158,4 +160,45 @@ body {
   color: var(--black-color);
   position: relative;
   bottom: -85%;
+}
+
+/* WELCOME & GAME OVER SCREEN */
+
+.screen-wrapper {
+  width: 80vw;
+  margin-top: -10vh;
+}
+
+.headline {
+  font-size: 10vh;
+}
+
+.cta {
+  font-size: 4vh;
+}
+
+.start-button {
+  width: 20vw;
+  height: 10vh;
+  font-size: 4vh;
+  font-family: "Gloria Hallelujah";
+  color: var(--black-color);
+  font-weight: 900;
+  border-radius: 0px;
+  background-color: transparent;
+  margin-top: 5vh;
+  cursor: crosshair;
+}
+
+.start-button:hover {
+  color: var(--white-color);
+  background-color: var(--black-color);
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+
+.highlight {
+  font-size: 15vh;
+  color: var(--red-color);
 }

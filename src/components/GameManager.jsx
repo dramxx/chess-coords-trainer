@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-import GoalPanel from "./GoalPanel";
-import StatusPanel from "./StatusPanel";
-import ChessBoard from "./ChessBoard";
-import Countdown from "./Countdown";
+import WelcomeScreen from "../Screens/WelcomeScreen";
+import GameScreen from "../Screens/GameScreen";
+import GameOverScreen from "../Screens/GameOverScreen";
 
-import {
-  BOARD_FILES,
-  BOARD_RANKS,
-  LAST_TARGETS_COUNT,
-} from "../commons/constants";
+import { BOARD_FILES, BOARD_RANKS, GAME_STATE } from "../commons/constants";
 
 const GameManager = () => {
   const [squareClickTarget, setSquareClickTarget] = useState([]);
   const [squareClickState, setSquareClickState] = useState([]);
+  const [gameState, setGameState] = useState(GAME_STATE.welcome);
 
   const generateTargetSquare = () => {
     const randomRank =
@@ -24,44 +20,53 @@ const GameManager = () => {
     return randomRank + randomFile;
   };
 
+  const [targetSquare, setTargetSquare] = useState(generateTargetSquare());
+
   const handleGameLoop = (id) => {
-    handleClick(id);
+    noteSquareClick(id);
     setTargetSquare(generateTargetSquare());
   };
 
-  const handleClick = (id) => {
+  const noteSquareClick = (id) => {
     setSquareClickTarget([...squareClickTarget, id]);
     setSquareClickState([...squareClickState, id === targetSquare]);
   };
 
+  const handleGameStart = () => {
+    setSquareClickTarget([]);
+    setSquareClickState([]);
+    setGameState(GAME_STATE.playing);
+  };
+
   const handleTimeOut = () => {
-    console.log("RESET GAME");
+    setGameState(GAME_STATE.gameOver);
   };
 
-  const returnLastTargets = () => {
-    let targets = squareClickTarget;
-
-    // if (squareClickTarget.length > LAST_TARGETS_COUNT) {
-    //   targets = squareClickTarget.slice(
-    //     squareClickTarget.length - LAST_TARGETS_COUNT
-    //   );
-    //   return targets;
-    // }
-    return targets;
+  const calculateScore = () => {
+    return {
+      total: squareClickState.length,
+      correct: squareClickState.filter((e) => e !== false).length,
+    };
   };
-
-  const [targetSquare, setTargetSquare] = useState(generateTargetSquare());
 
   return (
-    <div className={"wrapper flex"}>
-      <StatusPanel
-        className="flex"
-        squareClickState={squareClickState}
-        squareClickTarget={returnLastTargets()}
-      />
-      <ChessBoard onSquareClick={handleGameLoop} />
-      <GoalPanel className="flex" nextTarget={targetSquare} />
-      <Countdown countdown={30} timeOut={handleTimeOut} />
+    <div className="game-manager flex">
+      {gameState === GAME_STATE.welcome && (
+        <WelcomeScreen startGame={handleGameStart} />
+      )}
+      {gameState === GAME_STATE.playing && (
+        <GameScreen
+          className="flex"
+          squareClickState={squareClickState}
+          squareClickTarget={squareClickTarget}
+          handleGameLoop={handleGameLoop}
+          nextTarget={targetSquare}
+          handleTimeOut={handleTimeOut}
+        />
+      )}
+      {gameState === GAME_STATE.gameOver && (
+        <GameOverScreen score={calculateScore()} startGame={handleGameStart} />
+      )}
     </div>
   );
 };
