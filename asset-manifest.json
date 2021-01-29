@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/dramxx/chess-coords-trainer/static/css/main.5031cfb1.chunk.css",
+    "main.js": "/dramxx/chess-coords-trainer/static/js/main.6f0e6679.chunk.js",
+    "main.js.map": "/dramxx/chess-coords-trainer/static/js/main.6f0e6679.chunk.js.map",
+    "runtime-main.js": "/dramxx/chess-coords-trainer/static/js/runtime-main.874fe74a.js",
+    "runtime-main.js.map": "/dramxx/chess-coords-trainer/static/js/runtime-main.874fe74a.js.map",
+    "static/js/2.beda3039.chunk.js": "/dramxx/chess-coords-trainer/static/js/2.beda3039.chunk.js",
+    "static/js/2.beda3039.chunk.js.map": "/dramxx/chess-coords-trainer/static/js/2.beda3039.chunk.js.map",
+    "index.html": "/dramxx/chess-coords-trainer/index.html",
+    "static/css/main.5031cfb1.chunk.css.map": "/dramxx/chess-coords-trainer/static/css/main.5031cfb1.chunk.css.map",
+    "static/js/2.beda3039.chunk.js.LICENSE.txt": "/dramxx/chess-coords-trainer/static/js/2.beda3039.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.874fe74a.js",
+    "static/js/2.beda3039.chunk.js",
+    "static/css/main.5031cfb1.chunk.css",
+    "static/js/main.6f0e6679.chunk.js"
+  ]
+}
