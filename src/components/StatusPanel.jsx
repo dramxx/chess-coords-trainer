@@ -6,18 +6,23 @@ const StatusPanel = ({ squareClickTarget, squareClickState }) => {
   return (
     <div className="status-panel ">
       <div>
-        <span>{squareClickTarget}</span>
-        <>
-          {squareClickState ? (
-            <span className="emoji" type="img">
-              {SUCCESS_EMOJI}
-            </span>
+        {squareClickTarget.map((_, i) =>
+          squareClickState[i] ? (
+            <div key={i}>
+              <span>{squareClickTarget[i]}</span>
+              <span className="emoji" type="img">
+                {SUCCESS_EMOJI}
+              </span>
+            </div>
           ) : (
-            <span className="emoji" type="img">
-              {FAIL_EMOJI}
-            </span>
-          )}
-        </>
+            <div key={i}>
+              <span>{squareClickTarget[i]}</span>
+              <span className="emoji" type="img">
+                {FAIL_EMOJI}
+              </span>
+            </div>
+          )
+        )}
       </div>
     </div>
   );

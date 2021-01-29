@@ -7,8 +7,8 @@ import Countdown from "./Countdown";
 import { BOARD_FILES, BOARD_RANKS } from "../commons/constants";
 
 const GameManager = () => {
-  const [squareClickTarget, setSquareClickTarget] = useState("");
-  const [squareClickState, setSquareClickState] = useState("");
+  const [squareClickTarget, setSquareClickTarget] = useState([]);
+  const [squareClickState, setSquareClickState] = useState([]);
 
   const generateTargetSquare = () => {
     const randomRank =
@@ -26,8 +26,8 @@ const GameManager = () => {
   };
 
   const handleClick = (id) => {
-    setSquareClickTarget(id);
-    setSquareClickState(id === targetSquare);
+    setSquareClickTarget([...squareClickTarget, id]);
+    setSquareClickState([...squareClickState, id === targetSquare]);
   };
 
   const handleTimeOut = () => {

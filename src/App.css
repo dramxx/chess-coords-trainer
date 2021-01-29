@@ -62,7 +62,10 @@ body {
 /* STATUS PANEL */
 
 .status-panel {
-  height: 10vh;
+  border: 1px solid black;
+  align-self: center;
+
+  height: 50vh;
   width: 10vw;
   margin-left: 5vw;
 
