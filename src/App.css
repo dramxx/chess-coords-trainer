@@ -17,6 +17,7 @@ body {
   color: #333;
   line-height: 1, 6;
   background-color: whitesmoke;
+  overflow: hidden;
 }
 
 /* UTILS */
@@ -62,10 +63,9 @@ body {
 /* STATUS PANEL */
 
 .status-panel {
-  border: 1px solid black;
   align-self: center;
-
-  height: 50vh;
+  overflow: hidden;
+  height: 60vh;
   width: 10vw;
   margin-left: 5vw;
 

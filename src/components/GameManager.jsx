@@ -4,7 +4,11 @@ import StatusPanel from "./StatusPanel";
 import ChessBoard from "./ChessBoard";
 import Countdown from "./Countdown";
 
-import { BOARD_FILES, BOARD_RANKS } from "../commons/constants";
+import {
+  BOARD_FILES,
+  BOARD_RANKS,
+  LAST_TARGETS_COUNT,
+} from "../commons/constants";
 
 const GameManager = () => {
   const [squareClickTarget, setSquareClickTarget] = useState([]);
@@ -34,6 +38,18 @@ const GameManager = () => {
     console.log("RESET GAME");
   };
 
+  const returnLastTargets = () => {
+    let targets = squareClickTarget;
+
+    // if (squareClickTarget.length > LAST_TARGETS_COUNT) {
+    //   targets = squareClickTarget.slice(
+    //     squareClickTarget.length - LAST_TARGETS_COUNT
+    //   );
+    //   return targets;
+    // }
+    return targets;
+  };
+
   const [targetSquare, setTargetSquare] = useState(generateTargetSquare());
 
   return (
@@ -41,7 +57,7 @@ const GameManager = () => {
       <StatusPanel
         className="flex"
         squareClickState={squareClickState}
-        squareClickTarget={squareClickTarget}
+        squareClickTarget={returnLastTargets()}
       />
       <ChessBoard onSquareClick={handleGameLoop} />
       <GoalPanel className="flex" nextTarget={targetSquare} />

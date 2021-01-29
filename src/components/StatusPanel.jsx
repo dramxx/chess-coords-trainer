@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import { SUCCESS_EMOJI, FAIL_EMOJI } from "../commons/constants";
 
 const StatusPanel = ({ squareClickTarget, squareClickState }) => {
+  const scrollingPanelRef = useRef(null);
+
+  useEffect(() => {
+    scrollingPanelRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  });
+
   return (
-    <div className="status-panel ">
-      <div>
+    <div className="status-panel flex">
+      <div ref={scrollingPanelRef}>
         {squareClickTarget.map((_, i) =>
           squareClickState[i] ? (
             <div key={i}>
