@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import WelcomeScreen from "../Screens/WelcomeScreen";
-import GameScreen from "../Screens/GameScreen";
-import GameOverScreen from "../Screens/GameOverScreen";
+import WelcomeScreen from "../screens/WelcomeScreen";
+import GameScreen from "../screens/GameScreen";
+import GameOverScreen from "../screens/GameOverScreen";
 
 import { BOARD_FILES, BOARD_RANKS, GAME_STATE } from "../commons/constants";
 
