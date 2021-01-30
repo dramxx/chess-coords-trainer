@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dramxx/chess-coords-trainer/static/css/main.5031cfb1.chunk.css",
-    "main.js": "/dramxx/chess-coords-trainer/static/js/main.889866fc.chunk.js",
-    "main.js.map": "/dramxx/chess-coords-trainer/static/js/main.889866fc.chunk.js.map",
-    "runtime-main.js": "/dramxx/chess-coords-trainer/static/js/runtime-main.874fe74a.js",
-    "runtime-main.js.map": "/dramxx/chess-coords-trainer/static/js/runtime-main.874fe74a.js.map",
-    "static/js/2.beda3039.chunk.js": "/dramxx/chess-coords-trainer/static/js/2.beda3039.chunk.js",
-    "static/js/2.beda3039.chunk.js.map": "/dramxx/chess-coords-trainer/static/js/2.beda3039.chunk.js.map",
-    "index.html": "/dramxx/chess-coords-trainer/index.html",
-    "static/css/main.5031cfb1.chunk.css.map": "/dramxx/chess-coords-trainer/static/css/main.5031cfb1.chunk.css.map",
-    "static/js/2.beda3039.chunk.js.LICENSE.txt": "/dramxx/chess-coords-trainer/static/js/2.beda3039.chunk.js.LICENSE.txt"
+    "main.css": "/chess-coords-trainer/static/css/main.5031cfb1.chunk.css",
+    "main.js": "/chess-coords-trainer/static/js/main.889866fc.chunk.js",
+    "main.js.map": "/chess-coords-trainer/static/js/main.889866fc.chunk.js.map",
+    "runtime-main.js": "/chess-coords-trainer/static/js/runtime-main.172eabca.js",
+    "runtime-main.js.map": "/chess-coords-trainer/static/js/runtime-main.172eabca.js.map",
+    "static/js/2.beda3039.chunk.js": "/chess-coords-trainer/static/js/2.beda3039.chunk.js",
+    "static/js/2.beda3039.chunk.js.map": "/chess-coords-trainer/static/js/2.beda3039.chunk.js.map",
+    "index.html": "/chess-coords-trainer/index.html",
+    "static/css/main.5031cfb1.chunk.css.map": "/chess-coords-trainer/static/css/main.5031cfb1.chunk.css.map",
+    "static/js/2.beda3039.chunk.js.LICENSE.txt": "/chess-coords-trainer/static/js/2.beda3039.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.874fe74a.js",
+    "static/js/runtime-main.172eabca.js",
     "static/js/2.beda3039.chunk.js",
     "static/css/main.5031cfb1.chunk.css",
     "static/js/main.889866fc.chunk.js"
